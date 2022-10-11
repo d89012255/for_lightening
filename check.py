@@ -29,15 +29,7 @@ class MyEventHandler(FileSystemEventHandler):
 
         g.add("--all",shell=True)
         g.commit("-m auto update",shell=True)
-        while True:
-            try:
-                g.push()
-            except Exception as e:
-                print(e)
-                break
-            else:
-                print("Successful push!")
-                break
+        g.push("-f",shell=True)
         print("Successful push!")
 
     def on_deleted(self, event):
