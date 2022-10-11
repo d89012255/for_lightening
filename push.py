@@ -16,11 +16,10 @@
 
 
 import os
-import sys
-import codecs
 
 
-sys.stdout = codecs.getwriter('utf-8')(sys.stdout.detach())
+
+
 
 os.environ["GIT_PYTHON_REFRESH"] = "quiet"
 from git import Repo
