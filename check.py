@@ -29,7 +29,7 @@ class MyEventHandler(FileSystemEventHandler):
 
         g.add("--all",shell=True)
         g.commit("-m auto update",shell=True)
-        g.push(shell=True)
+        g.push("-f origin main",shell=True)
         print("Successful push!")
 
     def on_deleted(self, event):
