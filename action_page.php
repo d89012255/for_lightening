@@ -29,7 +29,7 @@ if(file_exists($temp)){
   // $in = exec("C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py 2>&1", $A, $ret);
   // print_r($A);
   // print_r($ret);
-  $answer = shell_exec("./dist/push.exe");
+  $answer = shell_exec("push.exe");
   echo $answer."</br>"; 
 }
 
