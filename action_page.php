@@ -26,11 +26,14 @@ if ($_FILES['module_file']['error'] === UPLOAD_ERR_OK){
 }
 if(file_exists($temp)){
   header("Content-type: text/html; charset=utf-8");
-  // $in = exec("C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py 2>&1", $A, $ret);
-  // print_r($A);
-  // print_r($ret);
-  $answer = shell_exec("push.exe");
-  echo $answer."</br>"; 
+
+
+  print_r("Success");
+  $in = exec("C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py", $A, $ret);
+  print_r($A);
+  print_r($ret);
+  print_r($in);
+
 }
 
 ?>
