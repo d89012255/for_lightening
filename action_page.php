@@ -25,6 +25,7 @@ if ($_FILES['module_file']['error'] === UPLOAD_ERR_OK){
   echo '錯誤代碼：' . $_FILES['module_file']['error'] . '<br/>';
 }
 if(file_exists($temp)){
+  header("Content-type: text/html; charset=utf-8");
   $in = exec("C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py 2>&1", $A, $ret);
   print_r($A);
   print_r($ret);

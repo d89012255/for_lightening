@@ -14,15 +14,19 @@
 # print("Successful push!") 
 
 
-from git import Repo
+
 import os
+import sys
+import codecs
+sys.stdout = codecs.getwriter('utf-8')(sys.stdout.detach())
 
 os.environ["GIT_PYTHON_REFRESH"] = "quiet"
-
+from git import Repo
 dirfile = os.path.abspath('C:/xampp/htdocs/for_lightening/uploads') # code的文件位置，我默认将其存放在根目录下
 repo = Repo(dirfile, search_parent_directories=True)
 
 g = repo.git
+
 g.add("--all")
 g.commit("-m auto update")
 g.push()
