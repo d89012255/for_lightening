@@ -28,7 +28,7 @@ class MyEventHandler(FileSystemEventHandler):
         g = repo.git
 
         g.add("--all",shell=True)
-        g.commit("-m -s auto update",shell=True)
+        g.commit("-m auto update",shell=True)
         g.push("-f",shell=True)
         print("Successful push!")
 
