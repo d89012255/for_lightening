@@ -34,6 +34,7 @@ class MyEventHandler(FileSystemEventHandler):
                 g.push()
             except Exception as e:
                 print(e)
+                break
             else:
                 print("Successful push!")
                 break
