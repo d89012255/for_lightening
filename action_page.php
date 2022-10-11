@@ -29,10 +29,12 @@ if(file_exists($temp)){
 
 
   print_r("Success");
-  $in = exec("C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py", $A, $ret);
-  print_r($A);
-  print_r($ret);
+  $in = exec("git --version");
   print_r($in);
+  //$in = exec("C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py", $A, $ret);
+  // print_r($A);
+  // print_r($ret);
+  // print_r($in);
 
 }
 
