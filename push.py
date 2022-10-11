@@ -18,8 +18,8 @@
 import os
 import sys
 import codecs
-import subprocess
-subprocess.run(["dir"], shell=True)
+
+
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout.detach())
 
 os.environ["GIT_PYTHON_REFRESH"] = "quiet"
@@ -29,7 +29,7 @@ repo = Repo(dirfile, search_parent_directories=True)
 
 g = repo.git
 
-g.add("--all")
-g.commit("-m auto update")
-g.push()
+g.add("--all",shell=True)
+g.commit("-m auto update",shell=True)
+g.push(shell=True)
 print("Successful push!")
