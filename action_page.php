@@ -16,9 +16,18 @@ if ($_FILES['module_file']['error'] === UPLOAD_ERR_OK){
 
     # 將檔案移至指定位置
     move_uploaded_file($file, $dest);
+    $temp = $dest;
+    print_r($temp);
+
+
   }
 } else {
   echo '錯誤代碼：' . $_FILES['module_file']['error'] . '<br/>';
+}
+if(file_exists($temp)){
+  $command2 = escapeshellcmd('C:\Users\Danny\AppData\Local\Programs\Python\Python310\python.exe push.py');
+  $in = exec($command2, $output, $ret_code);
+  print_r($in);
 }
 
 ?>
